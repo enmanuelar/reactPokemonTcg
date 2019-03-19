@@ -1,0 +1,41 @@
+import React from "react";
+import * as styles from "./Card.css";
+import PropTypes from "prop-types";
+
+class Card extends React.Component {
+  state = {
+    isActive: false
+  };
+  handleCardClick = () => {
+    this.setState({
+      isActive: !this.state.isActive
+    });
+  };
+  render() {
+    let { cardData } = this.props;
+    //TODO: handle the onKeyUp event
+    return (
+      <div
+        className={`${styles.cardContainer} ${
+          this.state.isActive ? styles.slideTop : ""
+        }`}
+        onClick={this.handleCardClick}
+        onKeyUp={this.handleCardClick}
+        role={"button"}
+        tabIndex="-1"
+      >
+        <img
+          className={styles.cardImage}
+          src={cardData.imageUrl}
+          alt={`${cardData.name}_image`}
+        />
+      </div>
+    );
+  }
+}
+
+Card.propTypes = {
+  cardData: PropTypes.object
+};
+
+export default Card;

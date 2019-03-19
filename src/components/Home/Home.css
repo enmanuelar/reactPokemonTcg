@@ -1,0 +1,13 @@
+.gameContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.cardsList {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0;
+  width: 800px;
+}

@@ -1,0 +1,124 @@
+.boardContainer {
+  height: 65vh;
+  width: 70vw;
+  border: 1px solid black;
+  perspective: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.board {
+  transform: rotateX(33deg);
+  background-color: cadetblue;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+}
+
+.cardPlaceholder {
+  width: 60px;
+  height: 83px;
+  transform: rotateZ(180deg);
+}
+
+.boardCard {
+  width: inherit;
+  height: inherit;
+}
+
+.bottomSide {
+  border: black solid 1px;
+  align-self: flex-end;
+  width: inherit;
+  height: 50%;
+  display: flex;
+}
+
+.prizeZone {
+  border: red solid 1px;
+  height: 70%;
+  width: 15%;
+  align-self: flex-end;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.prizeCardContainer {
+  border: #3b0000 solid 1px;
+  width: 45%;
+  height: 30%;
+}
+
+.benchZone {
+  border: fuchsia solid 1px;
+  display: flex;
+  width: 55%;
+  margin-left: 30px;
+  height: 40%;
+  align-self: flex-end;
+}
+
+.benchCardContainer {
+  display: flex;
+  border: #4f004f solid 1px;
+  width: 15%;
+  height: 70%;
+  align-self: center;
+  margin: 0 10px 0 10px;
+}
+
+.battleZone {
+  border: bisque 1px solid;
+  position: absolute;
+  display: flex;
+  left: 40%;
+  height: 25%;
+  width: 20%;
+  justify-content: center;
+}
+
+.battleCardContainer {
+  border: #51473d 1px solid;
+  width: 50%;
+  height: 70%;
+  align-self: center;
+}
+
+.rightAreaContainer {
+  display: flex;
+  width: 20%;
+  border: 1px solid blue;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.discardZone {
+  display: flex;
+  border: brown 1px solid;
+  align-self: flex-end;
+  justify-content: center;
+  margin: 0 0 50px 30px;
+  height: 33%;
+}
+
+.discardCardsContainer {
+  border: #411111 1px solid;
+  align-self: center;
+  height: 80%;
+}
+
+.deckZone {
+  display: flex;
+  border: #043f00 1px solid;
+  justify-content: center;
+  margin: 0 0 10px 30px;
+  height: 33%;
+}
+
+.deckCardsContainer {
+  border: #032600 1px solid;
+  align-self: center;
+  height: 80%;
+}
