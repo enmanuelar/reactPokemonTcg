@@ -23,5 +23,10 @@
     "browser": true,
     "node": true,
     "jest": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
