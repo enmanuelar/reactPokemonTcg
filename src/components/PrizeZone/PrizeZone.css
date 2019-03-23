@@ -1,0 +1,16 @@
+.prizeZone {
+    border: red solid 1px;
+    height: 70%;
+    width: 15%;
+    align-self: flex-end;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.prizeCardContainer {
+    /*border: #3b0000 solid 1px;*/
+    width: 45%;
+    height: 30%;
+}

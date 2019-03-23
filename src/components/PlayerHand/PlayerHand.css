@@ -1,0 +1,24 @@
+
+/*TODO: move this class to a common css file*/
+.widthAuto {
+    width: auto !important;
+}
+
+.playerHandContainer {
+    display: flex;
+    align-self: end;
+    width: 100%;
+    height: 220px;
+    border: red 1px solid;
+    z-index: 2;
+    background-color: antiquewhite;
+    margin-top: 60px;
+}
+
+.cardsList {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    bottom: 0;
+    width: 1110px;
+}

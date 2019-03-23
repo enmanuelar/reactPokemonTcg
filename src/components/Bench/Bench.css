@@ -1,0 +1,17 @@
+.benchZone {
+    border: fuchsia solid 1px;
+    display: flex;
+    width: 55%;
+    margin-left: 30px;
+    height: 40%;
+    align-self: flex-end;
+}
+
+.benchCardContainer {
+    display: flex;
+    /*border: #4f004f solid 1px;*/
+    width: 15%;
+    height: 70%;
+    align-self: center;
+    margin: 0 10px 0 10px;
+}
