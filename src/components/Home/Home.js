@@ -385,17 +385,20 @@ class Home extends React.Component {
     const setCardsList = card => {
       return (
         <li key={card.id}>
-          <Card cardData={card} />
+          <Card cardData={card} customClass={styles.widthAuto} />
         </li>
       );
     };
     return (
       <div className={styles.gameContainer}>
         <button onClick={this.onGetCardsClick}>Get cards</button>
-        <ul className={styles.cardsList}>
-          {this.state.cards.map(setCardsList)}
-        </ul>
+
         <Board />
+        <div className={styles.bottomPlayerHandContainer}>
+          <ul className={styles.cardsList}>
+            {this.state.cards.map(setCardsList)}
+          </ul>
+        </div>
       </div>
     );
   }

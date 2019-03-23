@@ -1,13 +1,29 @@
 .gameContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cardsList {
   display: flex;
   list-style-type: none;
   justify-content: space-evenly;
-  position: absolute;
   bottom: 0;
-  width: 800px;
+  width: 1110px;
+}
+
+.bottomPlayerHandContainer {
+  display: flex;
+  align-self: end;
+  width: 100%;
+  height: 220px;
+  border: red 1px solid;
+  z-index: 2;
+  background-color: antiquewhite;
+  margin-top: 60px;
+}
+
+/*TODO: move this class to a common css file*/
+.widthAuto {
+  width: auto !important;
 }

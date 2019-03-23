@@ -12,11 +12,12 @@ class Card extends React.Component {
     });
   };
   render() {
-    let { cardData } = this.props;
+    const { cardData } = this.props;
+    const customClass = this.props.customClass ? this.props.customClass : "";
     //TODO: handle the onKeyUp event
     return (
       <div
-        className={`${styles.cardContainer} ${
+        className={`${styles.cardContainer} ${customClass} ${
           this.state.isActive ? styles.slideTop : ""
         }`}
         onClick={this.handleCardClick}
@@ -35,7 +36,8 @@ class Card extends React.Component {
 }
 
 Card.propTypes = {
-  cardData: PropTypes.object
+  cardData: PropTypes.object,
+  customClass: PropTypes.string
 };
 
 export default Card;
