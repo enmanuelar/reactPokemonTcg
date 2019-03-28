@@ -3,7 +3,6 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: 0.3s;
   cursor: pointer;
   backface-visibility: hidden;
 }
@@ -15,13 +14,17 @@
   backface-visibility: hidden;
 }
 
-.cardContainer:hover {
-  width: 150px;
-  height: 195px;
-  margin: -15px -15px; /* initial margin - ((initial margin - width change (or height change))/2) */
-  position: relative;
-  z-index: 2;
-}
+/*.zoomInOnHover {*/
+  /*transition: 0.3s;*/
+/*}*/
+
+/*.zoomInOnHover:hover {*/
+  /*width: 150px;*/
+  /*height: 195px;*/
+  /*margin: -15px -15px; !* initial margin - ((initial margin - width change (or height change))/2) *!*/
+  /*position: relative;*/
+  /*z-index: 2;*/
+/*}*/
 
 .slideTop {
   -webkit-animation: slideTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;

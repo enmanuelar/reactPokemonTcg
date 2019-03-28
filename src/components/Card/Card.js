@@ -13,6 +13,7 @@ class Card extends React.Component {
   };
   render() {
     const { cardData } = this.props;
+    if (!cardData) return;
     const customClass = this.props.customClass ? this.props.customClass : "";
     //TODO: handle the onKeyUp event
     return (

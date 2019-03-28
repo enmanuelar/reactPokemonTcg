@@ -1,16 +1,16 @@
 .battleZone {
-    border: bisque 1px solid;
-    position: absolute;
-    display: flex;
-    left: 40%;
-    height: 25%;
-    width: 20%;
-    justify-content: center;
+  border: bisque 1px solid;
+  position: absolute;
+  display: flex;
+  left: 40%;
+  height: 25%;
+  width: 20%;
+  justify-content: center;
 }
 
 .battleCardContainer {
-    border: #51473d 1px solid;
-    width: 50%;
-    height: 70%;
-    align-self: center;
+  border: #51473d 1px solid;
+  width: 50%;
+  height: 70%;
+  align-self: center;
 }

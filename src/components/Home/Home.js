@@ -1,12 +1,13 @@
 import React from "react";
-import { getCards } from "../../utils/Api";
+import { getCards, getMockData } from "../../utils/Api";
 import * as styles from "./Home.css";
 import Board from "../Board/Board";
 import PlayerHand from "../PlayerHand/PlayerHand";
 
 class Home extends React.Component {
   state = {
-    cards: []
+    cards: [],
+    data: {}
   };
   componentDidMount() {}
   onGetCardsClick = () => {
@@ -14,12 +15,23 @@ class Home extends React.Component {
       this.setState({ cards });
     });
   };
+  onGetMockData = () => {
+    getMockData((err, { data }) => {
+      this.setState({ data });
+    });
+  };
   render() {
     return (
       <div className={styles.gameContainer}>
-        <button onClick={this.onGetCardsClick}>Get cards</button>
-        <Board />
-        <PlayerHand />
+        <button onClick={this.onGetMockData}>Get mock data</button>
+        <Board
+          deckData={this.state.data.deckData}
+          graveyardData={this.state.data.graveyardData}
+          bench={this.state.data.bench}
+          prizes={this.state.data.prizes}
+          battleCards={this.state.data.battleCards}
+        />
+        <PlayerHand playerHandCards={this.state.data.hand} />
       </div>
     );
   }
