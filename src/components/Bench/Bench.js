@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 class Bench extends React.Component {
   render() {
     const renderBenchCards = cardData => {
-      return <BenchCard cardData={cardData} />;
+      return <BenchCard key={cardData.key} cardData={cardData} />;
     };
     return (
       <div className={styles.benchZone}>

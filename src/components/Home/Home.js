@@ -1,40 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
 import { getCards, getMockData } from "../../utils/Api";
 import * as styles from "./Home.css";
 import Board from "../Board/Board";
 import PlayerHand from "../PlayerHand/PlayerHand";
+import { GamePlayContext } from "../../context/GamePlayContext";
 
-class Home extends React.Component {
-  state = {
-    cards: [],
-    data: {}
-  };
-  componentDidMount() {}
-  onGetCardsClick = () => {
+const Home = () => {
+  // eslint-disable-next-line no-unused-vars
+  const [gamePlay, setGamePlay] = useContext(GamePlayContext);
+
+  // eslint-disable-next-line no-unused-vars
+  const onGetCardsClick = () => {
     getCards(6, (err, { cards }) => {
       this.setState({ cards });
     });
   };
-  onGetMockData = () => {
+
+  const onGetMockData = () => {
     getMockData((err, { data }) => {
-      this.setState({ data });
+      setGamePlay(() => {
+        return { ...data };
+      });
     });
   };
-  render() {
-    return (
-      <div className={styles.gameContainer}>
-        <button onClick={this.onGetMockData}>Get mock data</button>
-        <Board
-          deckData={this.state.data.deckData}
-          graveyardData={this.state.data.graveyardData}
-          bench={this.state.data.bench}
-          prizes={this.state.data.prizes}
-          battleCards={this.state.data.battleCards}
-        />
-        <PlayerHand playerHandCards={this.state.data.hand} />
-      </div>
-    );
-  }
-}
+
+  return (
+    <div className={styles.gameContainer}>
+      <button onClick={onGetMockData}>Get mock data</button>
+      <Board />
+      <PlayerHand />
+    </div>
+  );
+};
 
 export default Home;

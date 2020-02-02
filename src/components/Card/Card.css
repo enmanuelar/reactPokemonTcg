@@ -15,15 +15,15 @@
 }
 
 /*.zoomInOnHover {*/
-  /*transition: 0.3s;*/
+/*transition: 0.3s;*/
 /*}*/
 
 /*.zoomInOnHover:hover {*/
-  /*width: 150px;*/
-  /*height: 195px;*/
-  /*margin: -15px -15px; !* initial margin - ((initial margin - width change (or height change))/2) *!*/
-  /*position: relative;*/
-  /*z-index: 2;*/
+/*width: 150px;*/
+/*height: 195px;*/
+/*margin: -15px -15px; !* initial margin - ((initial margin - width change (or height change))/2) *!*/
+/*position: relative;*/
+/*z-index: 2;*/
 /*}*/
 
 .slideTop {

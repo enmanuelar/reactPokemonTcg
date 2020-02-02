@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 class PrizeZone extends React.Component {
   render() {
     const renderPrizeCards = cardData => {
-      return <PrizeCard cardData={cardData} />;
+      return <PrizeCard key={cardData.id} cardData={cardData} />;
     };
     return (
       <div className={styles.prizeZone}>

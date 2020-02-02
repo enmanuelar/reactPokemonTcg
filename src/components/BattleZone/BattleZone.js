@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 class BattleZone extends React.Component {
   render() {
     const renderBattleCards = cardData => {
-      return <Card cardData={cardData} />;
+      return <Card key={cardData.key} cardData={cardData} />;
     };
     return (
       <div className={styles.battleZone}>

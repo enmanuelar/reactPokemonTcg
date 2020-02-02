@@ -1,30 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as styles from "./PlayerHand.css";
 import Card from "../Card/Card";
 import PropTypes from "prop-types";
+import { GamePlayContext } from "../../context/GamePlayContext";
 
-class PlayerHand extends React.Component {
-  render() {
-    const setCardsList = card => {
-      return (
-        <li key={card.id}>
-          <Card
-            cardData={card}
-            customClass={`${styles.widthAuto} ${styles.zoomInOnHover}`}
-          />
-        </li>
-      );
-    };
+const PlayerHand = () => {
+  const [gamePlay] = useContext(GamePlayContext);
+
+  const setCardsList = card => {
     return (
-      <div className={styles.playerHandContainer}>
-        <ul className={styles.cardsList}>
-          {this.props.playerHandCards &&
-            this.props.playerHandCards.map(setCardsList)}
-        </ul>
-      </div>
+      <li key={card.id}>
+        <Card
+          cardData={card}
+          customClass={`${styles.widthAuto} ${styles.zoomInOnHover}`}
+        />
+      </li>
     );
-  }
-}
+  };
+  return (
+    <div className={styles.playerHandContainer}>
+      <ul className={styles.cardsList}>
+        {gamePlay.hand && gamePlay.hand.map(setCardsList)}
+      </ul>
+    </div>
+  );
+};
 
 PlayerHand.propTypes = {
   playerHandCards: PropTypes.array

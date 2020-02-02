@@ -1,31 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as styles from "./Board.css";
 import PrizeZone from "../PrizeZone/PrizeZone";
 import Bench from "../Bench/Bench";
 import BattleZone from "../BattleZone/BattleZone";
 import WithdrawArea from "../WithdrawArea/WithdrawArea";
 import PropTypes from "prop-types";
+import { GamePlayContext } from "../../context/GamePlayContext";
 
-class Board extends React.Component {
-  render() {
-    return (
-      <div className={styles.boardContainer}>
-        <div className={styles.board}>
-          <div className={styles.bottomSide}>
-            bottom
-            <PrizeZone prizeCards={this.props.prizes} />
-            <Bench benchCards={this.props.bench} />
-            <BattleZone battleCards={this.props.battleCards} />
-            <WithdrawArea
-              deckData={this.props.deckData}
-              graveyardData={this.props.graveyardData}
-            />
-          </div>
+const Board = () => {
+  const [gamePlay] = useContext(GamePlayContext);
+  return (
+    <div className={styles.boardContainer}>
+      <div className={styles.board}>
+        <div className={styles.bottomSide}>
+          bottom
+          <PrizeZone prizeCards={gamePlay.prizes} />
+          <Bench benchCards={gamePlay.bench} />
+          <BattleZone battleCards={gamePlay.battleCards} />
+          <WithdrawArea
+            deckData={gamePlay.deckData}
+            graveyardData={gamePlay.graveyardData}
+          />
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 Board.propTypes = {
   deckData: PropTypes.array,
